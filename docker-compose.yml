@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  netcore-ci:
+    image: netcore-ci
+    build:
+      context: .
+      dockerfile: netcore-ci/Dockerfile
