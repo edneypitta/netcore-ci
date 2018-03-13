@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Run tests') {
       steps {
-        sh 'docker build "netcore-ci-tests"'
+        sh 'pwd && ls'
       }
     }
   }
