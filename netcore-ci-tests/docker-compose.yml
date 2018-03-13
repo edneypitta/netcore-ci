@@ -4,6 +4,6 @@ services:
   unit-tests:
     image: microsoft/dotnet
     volumes:
-      - .:/src
+      - ../:/src
     working_dir: /src
-    command: /bin/bash -c "dotnet test"
+    command: /bin/bash -c "dotnet test netcore-ci-tests"
