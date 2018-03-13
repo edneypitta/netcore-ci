@@ -1,7 +1,8 @@
 FROM microsoft/dotnet
-
 WORKDIR /app
-COPY . .
 
+COPY netcore-ci-tests.csproj .
 RUN dotnet restore
+
+COPY . .
 RUN dotnet test
