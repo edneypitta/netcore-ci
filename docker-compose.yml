@@ -6,3 +6,5 @@ services:
     build:
       context: .
       dockerfile: netcore-ci/Dockerfile
+    ports:
+      - "5000:80"
