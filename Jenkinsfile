@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Run tests') {
       steps {
-        sh 'docker-compose -f "netcore-ci-tests/docker-compose.yml" run unit-tests'
+        sh 'pwd && ls'
       }
     }
   }
