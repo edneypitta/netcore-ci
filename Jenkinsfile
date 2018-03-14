@@ -11,5 +11,10 @@ pipeline {
         sh 'docker build netcore-ci-tests/'
       }
     }
+    stage('Publish') {
+      steps {
+        sh 'mstest testResultsFile:"**/*.trx", keepLongStdio: true'
+      }
+    }
   }
 }
