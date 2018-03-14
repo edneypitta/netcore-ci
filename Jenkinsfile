@@ -11,11 +11,6 @@ pipeline {
         sh 'docker build netcore-ci-tests/'
       }
     }
-    stage('Publish') {
-      steps {
-        step([$class: 'MSTestPublisher', testResultsFile:"netcore-ci-tests/TestResults/output.trx", failOnError: true, keepLongStdio: true])
-      }
-    }
     stage('ls') {
       steps {
         sh 'ls'
