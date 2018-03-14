@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Publish') {
       steps {
-        sh 'mstest testResultsFile:"**/*.trx", keepLongStdio: true'
+        step([$class: 'MSTestPublisher', testResultsFile:"**/*.trx", failOnError: true, keepLongStdio: true])
       }
     }
   }
