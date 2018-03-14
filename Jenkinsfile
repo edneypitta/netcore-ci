@@ -18,7 +18,7 @@ pipeline {
     stage('Deploy') {
       steps {
         sh 'docker login --username=_ --password=7ec33de4-e00b-4e8d-8dab-027174e1fc87 registry.heroku.com'
-        sh 'docker push netcore-ci'
+        sh 'docker push registry.heroku.com/netcore-ci/web'
       }
     }
   }
