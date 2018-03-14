@@ -16,8 +16,11 @@ pipeline {
       }
     }
     stage('Deploy') {
+      environment {
+        HEROKU_TOKEN = '93341d1a-818d-435d-b4d2-404084c49737'
+      }
       steps {
-        sh 'docker login --username=_ --password=7ec33de4-e00b-4e8d-8dab-027174e1fc87 registry.heroku.com'
+        sh 'docker login --username=_ --password=${HEROKU_TOKEN} registry.heroku.com'
         sh 'docker push registry.heroku.com/netcore-ci/web'
       }
     }
