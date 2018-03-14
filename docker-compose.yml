@@ -2,7 +2,7 @@ version: '3'
 
 services:
   netcore-ci:
-    image: netcore-ci
+    image: registry.heroku.com/netcore-ci/web
     build:
       context: .
       dockerfile: netcore-ci/Dockerfile
