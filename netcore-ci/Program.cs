@@ -20,6 +20,7 @@ namespace netcore_ci
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
+                .UseUrls($"http://*:{Environment.GetEnvironmentVariable("PORT")}")
                 .Build();
     }
 }
